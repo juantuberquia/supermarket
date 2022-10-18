@@ -1,17 +1,14 @@
 import React from "react";
 import "./NavBar.css";
-import CategorysMenu from "../CategorysMenu/CategorysMenu";
+import CategorysMenu from "./CategorysMenu/CategorysMenu";
+import CardWidget from "../CardWidget/CardWidget";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <div className="content-icon-button">
-          <img
-            src="/assets/icon-supermarket.svg"
-            alt="icon-market"
-            className="icon-brand"
-          />
+          <CardWidget />
           <button
             className="navbar-toggler"
             type="button"

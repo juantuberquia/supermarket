@@ -7,8 +7,8 @@ const CategorysMenu = (props) => {
 
   return (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-      {collectionCategorys.map((item) => (
-        <Category key={uuidv4()} nameCategory={item} />
+      {collectionCategorys.map((nameCategory) => (
+        <Category key={uuidv4()} nameCategory={nameCategory} />
       ))}
     </ul>
   );
