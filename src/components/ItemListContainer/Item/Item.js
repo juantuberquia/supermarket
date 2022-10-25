@@ -1,12 +1,17 @@
 import React from "react";
+import "./Item.css";
 
-const Item = ({ image }) => {
-  // if (Object.keys(collectionImage).length === 0) return null;
-
+const Item = ({ image, tags, price }) => {
   return (
-    <article>
-      <img src={image} alt="supermarket" />
-    </article>
+    <div className="card">
+      <a href="/#" className="anchor">
+        <img src={image} alt="supermarket" className="img-product" />
+      </a>
+      <div className="card-img-top">
+        <h5 className="card-title"> {tags}</h5>
+        <p className="card-text text-muted"> Precio : {price} </p>
+      </div>
+    </div>
   );
 };
 

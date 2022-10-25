@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Item from "../Item/Item";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
 const ItemList = () => {
   const [collectionImage, setcollectionImage] = useState([]);
@@ -11,7 +11,7 @@ const ItemList = () => {
       /* obtener imagenes de la api pixabay */
       let search = "supermarket";
       const key = "14166181-a93322c4f13390a817f56b032";
-      const imgsForPage = 5;
+      const imgsForPage = 6;
 
       const response = await fetch(
         `https://pixabay.com/api/?key=${key}&q=${search}&per_page=${imgsForPage}`
@@ -26,14 +26,19 @@ const ItemList = () => {
   }, []);
 
   // setTimeout(() => {
-  //
-
   // }, 2000);
 
+  console.log(collectionImage);
+
   return (
-    <div>
+    <div className="card-deck">
       {collectionImage.map((item) => (
-        <Item key={uuidv4()} image={item.previewURL} />
+        <Item
+          key={item.id}
+          image={item.largeImageURL}
+          tags={item.tags}
+          price={item.imageHeight}
+        />
       ))}
     </div>
   );
