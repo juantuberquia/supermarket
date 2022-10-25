@@ -25,7 +25,7 @@ const NavBar = () => {
           {/* envio props(nombres de categorias) para mapearlos dentro de ul */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <CategorysMenu
-              tienda="nuestra tienda"
+              tienda="Nuestra Tienda"
               carnes="Carnes Frias"
               licores="Licores"
             />

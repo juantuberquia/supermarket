@@ -11,7 +11,7 @@ const ItemList = () => {
       /* obtener imagenes de la api pixabay */
       let search = "supermarket";
       const key = "14166181-a93322c4f13390a817f56b032";
-      const imgsForPage = 6;
+      const imgsForPage = 8;
 
       const response = await fetch(
         `https://pixabay.com/api/?key=${key}&q=${search}&per_page=${imgsForPage}`

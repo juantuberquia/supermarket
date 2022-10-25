@@ -1,4 +1,5 @@
 import React from "react";
+import "./Categorys.css";
 
 const Category = ({ nameCategory }) => {
   return (

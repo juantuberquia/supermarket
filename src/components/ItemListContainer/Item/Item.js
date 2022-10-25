@@ -9,7 +9,7 @@ const Item = ({ image, tags, price }) => {
       </a>
       <div className="card-img-top">
         <h5 className="card-title"> {tags}</h5>
-        <p className="card-text text-muted"> Precio : {price} </p>
+        <p className="card-text text-muted"> $ {price} </p>
       </div>
     </div>
   );

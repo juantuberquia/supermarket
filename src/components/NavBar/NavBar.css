@@ -42,6 +42,9 @@
 
 /* Large devices (large desktops) */
 @media only screen and (min-width: 1024px) {
+  .navbar-nav{
+    width: max-content;
+  }
 }
 
 /* Extralarge devices (extralarge desktops and TV's) */
