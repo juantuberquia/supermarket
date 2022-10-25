@@ -1,11 +1,11 @@
 import React from "react";
 
-const Item = ({ collectionImage }) => {
+const Item = ({ image }) => {
   // if (Object.keys(collectionImage).length === 0) return null;
 
   return (
     <article>
-      <img src={collectionImage} alt="supermarket" />
+      <img src={image} alt="supermarket" />
     </article>
   );
 };

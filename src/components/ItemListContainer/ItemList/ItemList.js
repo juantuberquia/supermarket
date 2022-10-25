@@ -7,7 +7,7 @@ const ItemList = () => {
   const [collectionImage, setcollectionImage] = useState([]);
 
   useEffect(() => {
-    const showImagesBarber = async () => {
+    const getDataImage = async () => {
       /* obtener imagenes de la api pixabay */
       let search = "supermarket";
       const key = "14166181-a93322c4f13390a817f56b032";
@@ -17,14 +17,10 @@ const ItemList = () => {
         `https://pixabay.com/api/?key=${key}&q=${search}&per_page=${imgsForPage}`
       );
       const res = await response.json();
-      let valor = res.hits;
-      setcollectionImage(...valor);
-
-      console.log(collectionImage);
-      console.log(res.hits);
+      setcollectionImage(res.hits);
     };
 
-    showImagesBarber();
+    getDataImage();
 
     return () => {};
   }, []);
