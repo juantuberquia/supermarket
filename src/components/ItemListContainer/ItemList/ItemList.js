@@ -28,8 +28,6 @@ const ItemList = () => {
   // setTimeout(() => {
   // }, 2000);
 
-  console.log(collectionImage);
-
   return (
     <div className="card-deck">
       {collectionImage.map((item) => (

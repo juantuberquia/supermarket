@@ -3,6 +3,7 @@ import "./NavBar.css";
 import CategorysMenu from "./CategorysMenu/CategorysMenu";
 import SearchBar from "./SearchBar/SearchBar";
 import CardWidget from "../CardWidget/CardWidget";
+import Cart from "./Cart/Cart";
 
 const NavBar = () => {
   return (
@@ -33,6 +34,7 @@ const NavBar = () => {
             />
           </ul>
         </div>
+        <Cart />
       </div>
     </nav>
   );

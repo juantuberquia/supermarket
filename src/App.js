@@ -1,13 +1,16 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <header className="">
-      <NavBar />
-      <ItemListContainer greeting="Bienvenido al SuperMarket Tuberquia" />
-    </header>
+    <>
+      <BrowserRouter>
+        <NavBar />
+        <ItemListContainer greeting="Bienvenido al SuperMarket Tuberquia" />
+      </BrowserRouter>
+    </>
   );
 }
 
