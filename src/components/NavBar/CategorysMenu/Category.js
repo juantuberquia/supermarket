@@ -1,12 +1,18 @@
 import React from "react";
 import "./Categorys.css";
+import { Link } from "react-router-dom";
 
 const Category = ({ nameCategory }) => {
+  let categoryWithOutEmpty = nameCategory.replace(" ", "-").toLowerCase();
   return (
     <li className="nav-item">
-      <a className="nav-link " aria-current="page" href="/#">
+      <Link
+        className="nav-link "
+        aria-current="page"
+        to={`/category/${categoryWithOutEmpty}`}
+      >
         {nameCategory}
-      </a>
+      </Link>
     </li>
   );
 };

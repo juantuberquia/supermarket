@@ -1,20 +1,40 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Item from "../Item/Item";
-// import { v4 as uuidv4 } from "uuid";
+import { useParams } from "react-router-dom";
 
 const ItemList = () => {
   const [collectionImage, setcollectionImage] = useState([]);
 
+  let { id } = useParams();
+  console.log(id);
+
+  const key = "14166181-a93322c4f13390a817f56b032";
+  const imgsForPage = 8;
+
+  // carga todos los productos, cuando esta en el home
+  useEffect(() => {
+    if (id === undefined) {
+      id = "supermercado";
+
+      const getAllCatalog = async () => {
+        const response = await fetch(
+          `https://pixabay.com/api/?key=${key}&q=${id}&per_page=${imgsForPage}`
+        );
+        const res = await response.json();
+        setcollectionImage(res.hits);
+      };
+      getAllCatalog();
+    }
+  }, [id]);
+
+  // trae los productos segun la categoria
   useEffect(() => {
     const getDataImage = async () => {
       /* obtener imagenes de la api pixabay */
-      let search = "supermarket";
-      const key = "14166181-a93322c4f13390a817f56b032";
-      const imgsForPage = 8;
 
       const response = await fetch(
-        `https://pixabay.com/api/?key=${key}&q=${search}&per_page=${imgsForPage}`
+        `https://pixabay.com/api/?key=${key}&q=${id}&per_page=${imgsForPage}`
       );
       const res = await response.json();
       setcollectionImage(res.hits);
@@ -23,7 +43,7 @@ const ItemList = () => {
     getDataImage();
 
     return () => {};
-  }, []);
+  }, [id]);
 
   // setTimeout(() => {
   // }, 2000);
@@ -36,6 +56,7 @@ const ItemList = () => {
           image={item.largeImageURL}
           tags={item.tags}
           price={item.imageHeight}
+          id={item.id}
         />
       ))}
     </div>

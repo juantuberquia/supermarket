@@ -29,8 +29,9 @@ const NavBar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <CategorysMenu
               tienda="Nuestra Tienda"
-              carnes="Carnes Frias"
+              carnes="Carnes"
               licores="Licores"
+              verduras="verduras"
             />
           </ul>
         </div>
