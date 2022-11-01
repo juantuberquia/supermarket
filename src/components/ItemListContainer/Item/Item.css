@@ -69,6 +69,29 @@
     margin-bottom: 16px !important;
 }
 
+.button-link{
+  min-height: auto;
+    background: #00a160;
+    border: 1px solid #00a160;
+    border-radius: 50px;
+    padding: 10px;
+    font-family: Signika,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-link:hover{
+  color: #fff;
+}
+
 
 
 /* Medium devices (Tablet and small desktops) */
