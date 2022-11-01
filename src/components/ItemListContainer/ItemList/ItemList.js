@@ -45,9 +45,6 @@ const ItemList = () => {
     return () => {};
   }, [id]);
 
-  // setTimeout(() => {
-  // }, 2000);
-
   return (
     <div className="card-deck">
       {collectionImage.map((item) => (
