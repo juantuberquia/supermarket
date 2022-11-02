@@ -7,7 +7,6 @@ const Contador = () => {
 
   const rest = () => {
     if (rest) {
-      console.log("entra res else");
       setCount(count - 1);
     }
   };

@@ -1,6 +1,7 @@
 import React from "react";
 import Contador from "../Contador/Contador";
 import "./ItemDetail.css";
+import AddToCart from "../AddToCart/AddToCart";
 
 const ItemDetail = ({ image, tags, price }) => {
   return (
@@ -8,7 +9,10 @@ const ItemDetail = ({ image, tags, price }) => {
       <img src={image} alt="product-id" />
       <p>{tags}</p>
       <p>$ {price}</p>
-      <Contador />
+      <div>
+        <Contador />
+        <AddToCart AddToCart="Agregar al carrito" />
+      </div>
     </div>
   );
 };

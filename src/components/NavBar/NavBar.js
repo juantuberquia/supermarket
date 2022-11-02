@@ -23,7 +23,6 @@ const NavBar = () => {
           >
             <span className="navbar-toggler-icon"> </span>
           </button>
-          <Cart />
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {/* envio props(nombres de categorias) para mapearlos dentro de ul */}
@@ -37,6 +36,7 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
+      <Cart />
     </nav>
   );
 };

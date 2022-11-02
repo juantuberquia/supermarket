@@ -7,7 +7,6 @@ const ItemList = () => {
   const [collectionImage, setcollectionImage] = useState([]);
 
   let { id } = useParams();
-  console.log(id);
 
   const key = "14166181-a93322c4f13390a817f56b032";
   const imgsForPage = 8;
