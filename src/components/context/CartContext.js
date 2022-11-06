@@ -3,15 +3,36 @@ import { React, useState, createContext } from "react";
 export const CartContext = createContext();
 
 const CartProvider = (props) => {
-  const [productCart, setProductCart] = useState(["11"]);
+  let { children } = props;
+  const [productCart, setProductCart] = useState([]);
 
-  const setValueCart = (count, tags, price) => {
-    setProductCart(count, tags, price);
+  const setValueCart = (count, tags, price, idProduct) => {
+    //***  VALIDATES FUNCTIONS*** //
 
-    console.log(productCart);
+    const isInInside = (idProduct) => {
+      return productCart.some((item) => item.idProduct === idProduct);
+    };
+
+    // validar si el producto esta agregado
+    if (isInInside(idProduct)) {
+      let valor = productCart.map((item) => {
+        if (item.idProduct === idProduct) {
+          setProductCart([...productCart], (item.count = count + item.count));
+        }
+      });
+    }
+    // agrega producto
+    else {
+      setProductCart([...productCart, { count, tags, price, idProduct }]);
+    }
   };
 
-  let { children } = props;
+  //funcion para eliminar un solo producto
+
+  //funcion para sumar total $ del carrito
+  // este seria con use efect
+
+  //funcion para sumar unidades totales del carrito (CartWidget)
 
   return (
     <CartContext.Provider value={{ productCart, setValueCart }}>

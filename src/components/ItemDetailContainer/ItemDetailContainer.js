@@ -29,6 +29,7 @@ const ItemDetailContainer = () => {
           image={product.largeImageURL}
           tags={product.tags}
           price={product.imageHeight}
+          idProduct={product.id}
         />
       ))}
     </div>
