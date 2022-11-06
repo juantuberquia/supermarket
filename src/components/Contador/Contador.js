@@ -1,10 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import "./Contador.css";
 
-const Contador = () => {
-  const [count, setCount] = useState(1);
-
+const Contador = ({ setCount, count }) => {
   const rest = () => {
     if (rest) {
       setCount(count - 1);
