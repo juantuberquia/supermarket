@@ -6,10 +6,11 @@ import { CartContext } from "../context/CartContext";
 const ItemDetail = ({ image, tags, price, idProduct }) => {
   const [count, setCount] = useState(1);
 
-  const { setValueCart } = useContext(CartContext);
+  const { setValueCart, summaryPrice } = useContext(CartContext);
 
   const captureValues = () => {
-    setValueCart(count, tags, price, idProduct);
+    setValueCart(count, tags, price, idProduct, image);
+    summaryPrice(price);
   };
 
   return (
