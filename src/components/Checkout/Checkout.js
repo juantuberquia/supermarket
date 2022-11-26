@@ -2,9 +2,16 @@ import { React, useContext } from "react";
 import Form from "../Form/Form";
 import { CartContext } from "../context/CartContext";
 import DetailSummary from "../SummaryCart/DetailSummary";
+import SuccesOrder from "../SuccesOrder/SuccesOrder";
 
 const Checkout = () => {
-  const { productCart, totalPrice, totalProducts } = useContext(CartContext);
+  const { productCart, totalPrice, totalProducts, orderIdProduct } =
+    useContext(CartContext);
+
+  if (orderIdProduct) {
+    return <SuccesOrder idOrder={orderIdProduct} />;
+  }
+
   return (
     <>
       {totalPrice ? (
@@ -22,7 +29,9 @@ const Checkout = () => {
           <p>precio:{totalPrice} </p>
           <p>productos : {totalProducts}</p>
         </div>
-      ) : null}
+      ) : (
+        <p> No hay productos en el carrito </p>
+      )}
     </>
   );
 };

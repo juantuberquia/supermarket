@@ -7,6 +7,7 @@ const CartProvider = (props) => {
   const [productCart, setProductCart] = useState([]);
   const [totalProducts, setTotalProducts] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [orderIdProduct, setOrderIdProduct] = useState(0);
 
   // funcion suma item del producto
   const setValueCart = (count, tags, price, idProduct, image) => {
@@ -71,6 +72,10 @@ const CartProvider = (props) => {
     localStorage.setItem("totalProducts", totalProducts);
   };
 
+  const idNewOrder = (idOrder) => {
+    setOrderIdProduct(idOrder);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -81,6 +86,8 @@ const CartProvider = (props) => {
         summaryPrice,
         totalPrice,
         deleteAll,
+        idNewOrder,
+        orderIdProduct,
       }}
     >
       {children}

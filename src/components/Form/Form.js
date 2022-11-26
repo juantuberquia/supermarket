@@ -1,4 +1,8 @@
-import { React, useState } from "react";
+import { addDoc, serverTimestamp } from "firebase/firestore";
+import { React, useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import { collection } from "firebase/firestore";
+import { dataBase } from "../../services/firebaseConfig";
 
 const Form = () => {
   const [name, setName] = useState();
@@ -8,8 +12,31 @@ const Form = () => {
   const [email2, setEmail2] = useState();
   const [checkEmail, setCheckEmail] = useState(false);
 
+  const { productCart, totalPrice, idNewOrder } = useContext(CartContext);
+
   const sendData = (e) => {
     e.preventDefault();
+
+    let informationOrder = {
+      infoUser: {
+        name,
+        lastName,
+        email2,
+      },
+      items: productCart,
+      TotalPrice: totalPrice,
+      date: serverTimestamp(),
+    };
+
+    const collectionOrder = collection(dataBase, "order");
+
+    addDoc(collectionOrder, informationOrder)
+      .then((res) => {
+        idNewOrder(res.id);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleName = (e) => {
