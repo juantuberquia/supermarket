@@ -1,7 +1,6 @@
 import React from "react";
 import "./NavBar.css";
 import CategorysMenu from "./CategorysMenu/CategorysMenu";
-import SearchBar from "./SearchBar/SearchBar";
 import CardWidget from "../CardWidget/CardWidget";
 import Cart from "./Cart/Cart";
 
@@ -11,7 +10,6 @@ const NavBar = () => {
       <div className="container-fluid">
         <div className="content-icon-button">
           <CardWidget />
-          <SearchBar />
           <button
             className="navbar-toggler"
             type="button"

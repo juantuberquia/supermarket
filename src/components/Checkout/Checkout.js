@@ -5,10 +5,11 @@ import DetailSummary from "../SummaryCart/DetailSummary";
 import SuccesOrder from "../SuccesOrder/SuccesOrder";
 
 const Checkout = () => {
-  const { productCart, totalPrice, totalProducts, orderIdProduct } =
+  const { productCart, totalPrice, totalProducts, orderIdProduct, deleteAll } =
     useContext(CartContext);
 
   if (orderIdProduct) {
+    deleteAll([]);
     return <SuccesOrder idOrder={orderIdProduct} />;
   }
 

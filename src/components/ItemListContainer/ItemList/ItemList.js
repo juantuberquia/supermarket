@@ -79,7 +79,7 @@ const ItemList = () => {
       {path ? (
         <NotFound name="categoria" />
       ) : (
-        <div>
+        <>
           {collectionImage.map((item) => (
             <Item
               key={item.id}
@@ -89,7 +89,7 @@ const ItemList = () => {
               id={item.id}
             />
           ))}
-        </div>
+        </>
       )}
     </div>
   );
