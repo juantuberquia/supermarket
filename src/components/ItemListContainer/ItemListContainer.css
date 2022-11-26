@@ -1,30 +1,10 @@
-/* #region Concepts */
-/* 
-    # Info
-    Este template es para que puedas estructurar tu código con la mentalidad/paradigma de Mobile first,
-    donde empiezas con los estilos y estructuras desde mobile, luego a base de media queries (que están abajo)
-    se dá el diseño para tablet, desktop y TVs. 
 
-    # Objetivo
-    La gracia de usar esta plantilla para sobreescribir estilos a base de especificación de cascada, por lo que si
-    escribes muchas media queries o muchos !important esta metodología no funcionará
-    
-    # Recomendaciones
-    * Trata de usar las media queries que ya están, si necesitas una créala pero que tenga sentido el crearla
-    * Si quieres sobre escribir algo a fuerza como última opción escríbelo en los Hard Overrides y SOLO si es
-    necesario usa el !important
-*/
-/* #endregion */
-
-/* #region Overrides && Mobile */
-
-/* #endregion */
-/* #region  Media Queries */
 
 .title-greeting{
   margin-top: 6%;
   margin-bottom: 6%;
 }
+
 
 
 /* Medium devices (Tablet and small desktops) */
