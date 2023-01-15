@@ -1,29 +1,4 @@
-/* #region Concepts */
-/* 
-    # Info
-    Este template es para que puedas estructurar tu código con la mentalidad/paradigma de Mobile first,
-    donde empiezas con los estilos y estructuras desde mobile, luego a base de media queries (que están abajo)
-    se dá el diseño para tablet, desktop y TVs. 
-
-    # Objetivo
-    La gracia de usar esta plantilla para sobreescribir estilos a base de especificación de cascada, por lo que si
-    escribes muchas media queries o muchos !important esta metodología no funcionará
-    
-    # Recomendaciones
-    * Trata de usar las media queries que ya están, si necesitas una créala pero que tenga sentido el crearla
-    * Si quieres sobre escribir algo a fuerza como última opción escríbelo en los Hard Overrides y SOLO si es
-    necesario usa el !important
-*/
-/* #endregion */
-
-/* #region Overrides && Mobile */
-
-/* #endregion */
-/* #region  Media Queries */
-
-
-
-.card-deck{
+.card-deck {
   display: flex;
   flex-wrap: wrap;
   width: 94%;
@@ -31,19 +6,20 @@
   margin-right: auto;
   justify-content: space-between;
 }
-.card{
+
+.card {
   width: 48%;
   margin-bottom: 4%;
   border-radius: 8px;
 }
 
-.img-product{
+.img-product {
   width: 100%;
   border-radius: 8px 8px 0px 0px;
 }
 
-.card-title{
-  font-family: Signika,sans-serif;
+.card-title {
+  font-family: Signika, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -55,41 +31,39 @@
   padding-left: 5px;
 }
 
-.text-muted{
-  font-family: Roboto,sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
-    align-items: center;
-    letter-spacing: -.01em;
-    color: #00a160 !important;
-    text-align: left;
-    padding-left: 5px;
-    margin-top: 16px;
-    margin-bottom: 16px !important;
+.text-muted {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+  align-items: center;
+  letter-spacing: -.01em;
+  color: #00a160 !important;
+  text-align: left;
+  padding-left: 5px;
+  margin-top: 16px;
+  margin-bottom: 16px !important;
 }
 
-.button-link{
+.button-link {
   min-height: auto;
-    background: #00a160;
-    border: 1px solid #00a160;
-    border-radius: 50px;
-    padding: 10px;
-    font-family: Signika,sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+  background: #00a160;
+  border: 1px solid #00a160;
+  border-radius: 50px;
+  padding: 10px;
+  font-family: Signika, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  width: 80%;
+  margin: 10px auto;
 }
 
-.button-link:hover{
+.button-link:hover {
   color: #fff;
 }
 
@@ -97,7 +71,7 @@
 
 /* Medium devices (Tablet and small desktops) */
 @media screen and (min-width: 640px) {
-  .card{
+  .card {
     width: 32%;
   }
 
@@ -105,21 +79,18 @@
 
 /* Large devices (large desktops) */
 @media only screen and (min-width: 1024px) {
-  .card{
+  .card {
     width: 24%;
+  }
+
+  .card-deck {
+    width: 65%;
   }
 }
 
 /* Extralarge devices (extralarge desktops and TV's) */
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1920px) {
+  .card-deck {
+    width: 60%;
+  }
 }
-/* #endregion */
-
-/* #region  Hard Overrides */
-
-/* #endregion */
-
-
-
-
-

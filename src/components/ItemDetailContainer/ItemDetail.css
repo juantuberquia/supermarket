@@ -1,60 +1,45 @@
-/* #region Concepts */
-/* 
-    # Info
-    Este template es para que puedas estructurar tu código con la mentalidad/paradigma de Mobile first,
-    donde empiezas con los estilos y estructuras desde mobile, luego a base de media queries (que están abajo)
-    se dá el diseño para tablet, desktop y TVs. 
-
-    # Objetivo
-    La gracia de usar esta plantilla para sobreescribir estilos a base de especificación de cascada, por lo que si
-    escribes muchas media queries o muchos !important esta metodología no funcionará
-    
-    # Recomendaciones
-    * Trata de usar las media queries que ya están, si necesitas una créala pero que tenga sentido el crearla
-    * Si quieres sobre escribir algo a fuerza como última opción escríbelo en los Hard Overrides y SOLO si es
-    necesario usa el !important
-*/
-/* #endregion */
-
-/* #region Overrides && Mobile */
-
-/* #endregion */
-/* #region  Media Queries */
-.container-detail-product{
-  margin-top: 20px;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+.container-detail-product {
+  width: 60%;
+  margin: 20px auto;
 }
-.container-detail-product img {
+
+.container-image-detail img {
   width: 100%;
+  border-radius: 10px;
 }
 
+.container-image-detail {
+  margin-bottom: 10px;
+}
+
+.name-detail {
+  font-family: Signika, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 109.5%;
+  color: #474747;
+}
+
+.price-detail {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  align-items: center;
+  letter-spacing: -.01em;
+  color: #00a160;
+}
 
 /* Medium devices (Tablet and small desktops) */
-@media screen and (min-width: 640px) {
-  
-
-}
+@media screen and (min-width: 640px) {}
 
 /* Large devices (large desktops) */
 @media only screen and (min-width: 1024px) {
-.container-detail-product{
-  width: 35%;
-}
-  
+  .container-detail-product {
+    width: 35%;
+  }
+
 }
 
 /* Extralarge devices (extralarge desktops and TV's) */
-@media only screen and (min-width: 1400px) {
-}
-/* #endregion */
-
-/* #region  Hard Overrides */
-
-/* #endregion */
-
-
-
-
-
+@media only screen and (min-width: 1400px) {}

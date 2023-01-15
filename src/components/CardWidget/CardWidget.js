@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CardWidget = () => {
   return (
-    <div>
+    <div className="icon-logo-header">
       <Link to="/#">
         <img
           src="/assets/icon-supermarket.svg"

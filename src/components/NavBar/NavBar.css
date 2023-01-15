@@ -22,41 +22,128 @@
 /* #region  Media Queries */
 
 
-.content-icon-supermarket{
+.content-icon-supermarket {
   width: 100px;
 }
 
-.content-icon-button
-{
+.content-icon-button {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 10px 10px 0px 10px
 }
-.icon-brand{
-  width: 25px;
+
+.hamburguer-menu {
+  width: 100%;
+  background-color: #00a160;
+  padding: 10px;
+  box-shadow: 0px 8px 14px 0px rgb(0 0 0 / 10%);
+
 }
+
+.navbar-nav {
+  width: 100%;
+}
+
+.nav-item:hover {
+  background-color: #d2faea;
+}
+
+.navbar-toggler {
+  background-color: #ffff;
+  border-style: none;
+
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] span {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url("../../../public/assets/close-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.navbar-toggler[aria-expanded="false"] span {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url("../../../public/assets/hamburger-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.icon-logo-header {
+  width: 32px;
+}
+
+.container-fluid,
+.navbar-expand-lg {
+  padding: 0;
+}
+
+.list-categories {
+  padding: 1rem;
+}
+
 
 /* Medium devices (Tablet and small desktops) */
 @media screen and (min-width: 640px) {
+
+  .content-icon-button {
+    padding: 10px 20px 0px 20px;
+  }
+
+  .hamburguer-menu {
+    padding: 10px 20px;
+  }
 }
 
 /* Large devices (large desktops) */
 @media only screen and (min-width: 1024px) {
-  .navbar-nav{
+  .nav-item:hover {
+    background-color: transparent;
+  }
+
+  .navbar-nav {
     width: max-content;
+  }
+
+  .hamburguer-menu {
+    display: none;
+  }
+
+  .container-fluid {
+    position: relative;
+    padding: 1rem
+  }
+
+  .list-categories {
+    padding: 0;
+  }
+
+  .icon-logo-header {
+    width: 35px;
+  }
+
+  .content-icon-button {
+    padding: 0;
+
   }
 }
 
 /* Extralarge devices (extralarge desktops and TV's) */
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1920px) {
+  .container-fluid {
+    margin: 1rem 2rem;
+    padding: 0;
+  }
 }
-/* #endregion */
-
-/* #region  Hard Overrides */
-
-/* #endregion */
-
-
-
-
-

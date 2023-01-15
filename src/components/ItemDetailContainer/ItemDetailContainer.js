@@ -51,7 +51,7 @@ const ItemDetailContainer = () => {
       {checkUrl ? (
         <NotFound name="producto" />
       ) : (
-        <div>
+        <div className="container-detail-product">
           {productId.map((product) => (
             <ItemDetail
               key={product.id}
