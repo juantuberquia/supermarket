@@ -64,43 +64,107 @@ const Form = () => {
 
   return (
     <div>
-      <form action="" onSubmit={sendData}>
-        <input
+      <form action="" onSubmit={sendData} className="w-a mx-auto">
+        <div class="form-group">
+          <label for="exampleInputEmail1" className="d-block">
+            Ingresa tu nombre
+          </label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            name="nombre"
+            onChange={handleName}
+            value={name}
+            className="ml-3"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" className="d-block">
+            Ingresa tu apellido
+          </label>
+          <input
+            placeholder="Apellido"
+            name="apellido"
+            onChange={handleLastName}
+            value={lastName}
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" className="d-block">
+            Ingresa tu telefono
+          </label>
+          <input
+            type="tel"
+            placeholder="telefono"
+            name="telefono"
+            onChange={handleTel}
+            value={number}
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" className="d-block">
+            Ingresa tu correo
+          </label>
+          <input
+            type="email"
+            placeholder="ingresar correo"
+            name="correo"
+            onChange={handleEmail1}
+            value={email}
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" className="d-block">
+            Ingresa tu correo
+          </label>
+          <input
+            type="email"
+            placeholder="ingresar correo"
+            name="correo2"
+            onChange={handleEmail2}
+            value={email2}
+          />
+        </div>
+
+        {/* <input
           type="text"
           placeholder="Nombre"
           name="nombre"
           onChange={handleName}
           value={name}
-        />
-        <input
+        /> */}
+        {/* <input
           type="text"
           placeholder="Apellido"
           name="apellido"
           onChange={handleLastName}
           value={lastName}
-        />
-        <input
+        /> */}
+        {/* <input
           type="tel"
           placeholder="telefono"
           name="telefono"
           onChange={handleTel}
           value={number}
-        />
-        <input
+        /> */}
+        {/* <input
           type="email"
           placeholder="ingresar correo"
           name="correo"
           onChange={handleEmail1}
           value={email}
-        />
-        <input
+        /> */}
+        {/* <input
           type="email"
           placeholder="ingresar correo"
           name="correo2"
           onChange={handleEmail2}
           value={email2}
-        />
+        /> */}
         {checkEmail ? <button>Realizar compra</button> : null}
+        <small id="emailHelp" class="form-text text-muted">
+          Nunca compartas tu email con otra persona.
+        </small>
       </form>
     </div>
   );

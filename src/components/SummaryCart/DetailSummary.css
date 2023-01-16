@@ -1,0 +1,29 @@
+.bg-secondary {
+  border-color: transparent;
+  border-radius: 3px;
+  font-size: 13px;
+
+}
+
+.style-button {
+  border-style: none;
+  border-radius: 3px;
+  padding: 10px 10px;
+  font-family: Signika;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.quantity-product {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: .02em;
+  color: #a5a5a5;
+}

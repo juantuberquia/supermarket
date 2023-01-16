@@ -14,11 +14,17 @@ const Contador = ({ setCount, count }) => {
 
   return (
     <div className="container-count">
-      <button onClick={rest} disabled={count === 0}>
+      <button
+        onClick={rest}
+        disabled={count === 0}
+        className="minus-plus-button"
+      >
         -
       </button>
       <p>{count}</p>
-      <button onClick={sum}> + </button>
+      <button onClick={sum} className="minus-plus-button">
+        +
+      </button>
     </div>
   );
 };

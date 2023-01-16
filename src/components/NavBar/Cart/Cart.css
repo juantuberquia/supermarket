@@ -1,9 +1,23 @@
 .content-icon-cart {
   width: max-content;
+  position: relative;
 }
 
 .content-icon-cart img {
   width: 32px;
+}
+
+.quantity-badge {
+  background-color: #f71963;
+  position: absolute;
+  right: 18px;
+  top: -7px;
+  font-size: 13px;
+  width: 20px;
+  padding: 0 6px;
+  color: #ffff;
+  border-radius: 50px;
+
 }
 
 /* Large devices (large desktops) */

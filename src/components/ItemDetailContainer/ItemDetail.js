@@ -33,7 +33,9 @@ const ItemDetail = ({ image, tags, price, idProduct }) => {
       <p className="price-detail"> {priceFormated}</p>
       <div>
         <Contador setCount={setCount} count={count} />
-        <button onClick={captureValues}>Agregar al carrito</button>
+        <button onClick={captureValues} className="button-link">
+          Agregar al carrito
+        </button>
       </div>
     </>
   );

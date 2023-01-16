@@ -9,7 +9,9 @@ const Cart = () => {
   return (
     <div className="content-icon-cart">
       <Link to="/cart">
-        {totalProducts ? totalProducts : null}
+        <span className="quantity-badge">
+          {totalProducts ? totalProducts : null}
+        </span>
         <img src="/assets/cart.svg" alt="icon-cart" />
       </Link>
     </div>
