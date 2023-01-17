@@ -1,0 +1,34 @@
+.form-checkout {
+  width: min-content;
+}
+
+.text-muted {
+  font-size: 9px;
+}
+
+.inputs-form:focus {
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(0 0 0 / 40%);
+  border-style: none;
+  border: none;
+}
+
+.inputs-form {
+  border: 1px solid #cbcbcb;
+  border-radius: 50px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: Signika, sans-serif;
+  font-size: 14px;
+  height: 35px;
+  line-height: 28px;
+  max-height: none;
+  outline: initial;
+  padding: 0 2rem;
+}
+
+.label-form {
+  font-family: Signika, sans-serif;
+  color: #999999;
+  margin-bottom: 5px;
+
+}

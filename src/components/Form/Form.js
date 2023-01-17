@@ -3,6 +3,7 @@ import { React, useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { collection } from "firebase/firestore";
 import { dataBase } from "../../services/firebaseConfig";
+import "./form.css";
 
 const Form = () => {
   const [name, setName] = useState();
@@ -63,11 +64,15 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <form action="" onSubmit={sendData} className="w-a mx-auto">
+    <>
+      <form
+        action=""
+        onSubmit={sendData}
+        className="w-a mx-auto d-flex flex-column gap-2 form-checkout"
+      >
         <div class="form-group">
-          <label for="exampleInputEmail1" className="d-block">
-            Ingresa tu nombre
+          <label for="exampleInputEmail1" className="d-block label-form">
+            Ingresa tu nombre:
           </label>
           <input
             type="text"
@@ -75,23 +80,24 @@ const Form = () => {
             name="nombre"
             onChange={handleName}
             value={name}
-            className="ml-3"
+            className="ml-3 inputs-form"
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1" className="d-block">
-            Ingresa tu apellido
+          <label for="exampleInputEmail1" className="d-block label-form">
+            Ingresa tu apellido:
           </label>
           <input
             placeholder="Apellido"
             name="apellido"
             onChange={handleLastName}
             value={lastName}
+            className="inputs-form"
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1" className="d-block">
-            Ingresa tu telefono
+          <label for="exampleInputEmail1" className="d-block label-form">
+            Ingresa tu telefono:
           </label>
           <input
             type="tel"
@@ -99,11 +105,12 @@ const Form = () => {
             name="telefono"
             onChange={handleTel}
             value={number}
+            className="inputs-form"
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1" className="d-block">
-            Ingresa tu correo
+          <label for="exampleInputEmail1" className="d-block label-form">
+            Ingresa tu correo:
           </label>
           <input
             type="email"
@@ -111,11 +118,12 @@ const Form = () => {
             name="correo"
             onChange={handleEmail1}
             value={email}
+            className="inputs-form"
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1" className="d-block">
-            Ingresa tu correo
+          <label for="exampleInputEmail1" className="d-block label-form">
+            Ingresa tu correo:
           </label>
           <input
             type="email"
@@ -123,50 +131,17 @@ const Form = () => {
             name="correo2"
             onChange={handleEmail2}
             value={email2}
+            className="inputs-form"
           />
         </div>
-
-        {/* <input
-          type="text"
-          placeholder="Nombre"
-          name="nombre"
-          onChange={handleName}
-          value={name}
-        /> */}
-        {/* <input
-          type="text"
-          placeholder="Apellido"
-          name="apellido"
-          onChange={handleLastName}
-          value={lastName}
-        /> */}
-        {/* <input
-          type="tel"
-          placeholder="telefono"
-          name="telefono"
-          onChange={handleTel}
-          value={number}
-        /> */}
-        {/* <input
-          type="email"
-          placeholder="ingresar correo"
-          name="correo"
-          onChange={handleEmail1}
-          value={email}
-        /> */}
-        {/* <input
-          type="email"
-          placeholder="ingresar correo"
-          name="correo2"
-          onChange={handleEmail2}
-          value={email2}
-        /> */}
-        {checkEmail ? <button>Realizar compra</button> : null}
+        {checkEmail ? (
+          <button className="button-link">Realizar compra</button>
+        ) : null}
         <small id="emailHelp" class="form-text text-muted">
           Nunca compartas tu email con otra persona.
         </small>
       </form>
-    </div>
+    </>
   );
 };
 

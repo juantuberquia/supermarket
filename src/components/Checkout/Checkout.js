@@ -17,18 +17,19 @@ const Checkout = () => {
     <>
       {totalPrice ? (
         <div>
+          <div className="container-detail-product">
+            {productCart.map((product) => (
+              <DetailSummary
+                key={product.idProduct}
+                tags={product.tags}
+                total={product.count}
+                image={product.image}
+                idProduct={product.idProduct}
+              />
+            ))}
+            <p className="price-detail"> Precio: {totalPrice} </p>
+          </div>
           <Form />
-          {productCart.map((product) => (
-            <DetailSummary
-              key={product.idProduct}
-              tags={product.tags}
-              total={product.count}
-              image={product.image}
-              idProduct={product.idProduct}
-            />
-          ))}
-          <p>precio:{totalPrice} </p>
-          <p>productos : {totalProducts}</p>
         </div>
       ) : (
         <p> No hay productos en el carrito </p>
