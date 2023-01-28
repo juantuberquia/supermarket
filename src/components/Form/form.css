@@ -1,5 +1,6 @@
 .form-checkout {
-  width: min-content;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .text-muted {
@@ -24,6 +25,7 @@
   max-height: none;
   outline: initial;
   padding: 0 2rem;
+  width: 100%;
 }
 
 .label-form {
@@ -31,4 +33,18 @@
   color: #999999;
   margin-bottom: 5px;
 
+}
+
+/* tablet */
+@media screen and (min-width:640px) {
+  .form-checkout {
+    width: 65%;
+  }
+}
+
+/* laptop */
+@media screen and (min-width:1024px) {
+  .form-checkout {
+    width: 36%;
+  }
 }

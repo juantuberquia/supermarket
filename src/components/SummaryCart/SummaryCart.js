@@ -26,9 +26,9 @@ const SummaryCart = () => {
       </div>
 
       {totalPrice ? (
-        <div className="mt-5 mx-auto w-75">
+        <div className="container-detail-product">
           <p className="price-detail"> Total: $ {totalPrice}</p>
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between buttons-end-section">
             <button onClick={emptyCart} className="bg-danger  style-button">
               Vaciar Carrito
             </button>

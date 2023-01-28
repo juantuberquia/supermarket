@@ -68,7 +68,7 @@ const Form = () => {
       <form
         action=""
         onSubmit={sendData}
-        className="w-a mx-auto d-flex flex-column gap-2 form-checkout"
+        className="d-flex flex-column gap-2 form-checkout"
       >
         <div class="form-group">
           <label for="exampleInputEmail1" className="d-block label-form">

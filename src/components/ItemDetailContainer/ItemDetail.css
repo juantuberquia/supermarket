@@ -1,5 +1,5 @@
 .container-detail-product {
-  width: 60%;
+  width: 80%;
   margin: 20px auto;
 }
 
@@ -31,7 +31,11 @@
 }
 
 /* Medium devices (Tablet and small desktops) */
-@media screen and (min-width: 640px) {}
+@media screen and (min-width: 640px) {
+  .container-detail-product {
+    width: 65%;
+  }
+}
 
 /* Large devices (large desktops) */
 @media only screen and (min-width: 1024px) {
